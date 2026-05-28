@@ -13,13 +13,10 @@
 | Datei | Beschreibung |
 |---|---|
 | `experiment.py` | Erhebungsskript: führt 54 API-Aufrufe pro Modell durch (18 Profile × 3 Formulierungsvarianten) |
-| `auswertung.py` | Auswertungsskript: berechnet H1, H3 und H4 aus den Rohdaten |
 | `rohdaten_gpt.csv` | Rohdaten GPT-4o (54 Antworten) |
 | `rohdaten_claude.csv` | Rohdaten Claude Sonnet 4.6 (54 Antworten) |
 | `rohdaten_gemini.csv` | Rohdaten Gemini 3.1 Pro (54 Antworten) |
-| `Auswertung_Ergebnisse.xlsx` | Auswertungs-Arbeitsmappe (H1, H3, H4 Berechnungen, H2 Codierung) |
-| `requirements.txt` | Python-Paketabhängigkeiten |
-| `LICENSE` | MIT-Lizenz (Code) |
+| `auswertung_ergebnisse_neu.xlsx` | Auswertungs-Arbeitsmappe (H1, H3, H4 Berechnungen, H2 Codierung) |
 
 ---
 
@@ -85,14 +82,6 @@ python experiment.py --modell gemini
 
 Das Skript schreibt je Modell eine CSV-Datei (`rohdaten_gpt.csv`, `rohdaten_claude.csv`, `rohdaten_gemini.csv`) mit allen 54 Antworten samt Zeitstempel, Modellversion und Variantenkennung.
 
-### Auswertung
-
-```bash
-python auswertung.py
-```
-
-Erzeugt `auswertung_ergebnisse.xlsx` mit einem Sheet je Hypothese (H1, H3a/b/c, H4).
-
 ---
 
 ## Hinweise zur Reproduzierbarkeit
@@ -108,21 +97,3 @@ Erzeugt `auswertung_ergebnisse.xlsx` mit einem Sheet je Hypothese (H1, H3a/b/c, 
 
 Das Skript `experiment.py` wurde mit Unterstützung von ChatGPT (GPT-5) erstellt. Eine vollständige Dokumentation gemäß den FH-Regeln zur KI-Assistenz bei Abschlussarbeiten findet sich in der Bachelorarbeit, Kapitel 5.6 „Transparenz zur KI-Nutzung".
 
----
-
-## Lizenz
-
-- **Code (`experiment.py`, `auswertung.py`):** MIT-Lizenz, siehe `LICENSE`.
-- **Daten (CSV, XLSX):** Bei Nutzung wird um Zitation der Bachelorarbeit gebeten.
-
----
-
-## Zitation
-
-Gößwellner, S. (2026). *Analyse von KI-generierten Vorschlägen zur Versicherungssumme in der Unfallversicherung bei Variation von Eingabeparametern — Bewertung hinsichtlich Konsistenz, Nachvollziehbarkeit und fachlicher Angemessenheit* [Bachelorarbeit]. FH JOANNEUM Graz, Studiengang Bank- und Versicherungsmanagement.
-
----
-
-## Kontakt
-
-sebastian.goesswellner@gmail.com
